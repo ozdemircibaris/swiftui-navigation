@@ -15,6 +15,7 @@
 		068F02DB29586133002AF795 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068F02DA29586133002AF795 /* SignIn.swift */; };
 		068F02DE29586156002AF795 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068F02DD29586156002AF795 /* SignUp.swift */; };
 		068F02E12958625B002AF795 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068F02E02958625B002AF795 /* Home.swift */; };
+		068F02E729599649002AF795 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068F02E629599649002AF795 /* KeychainService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		068F02DA29586133002AF795 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		068F02DD29586156002AF795 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		068F02E02958625B002AF795 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		068F02E629599649002AF795 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		068F02C12957A213002AF795 /* navigationExample */ = {
 			isa = PBXGroup;
 			children = (
+				068F02E529599636002AF795 /* Services */,
 				068F02D82958611C002AF795 /* Screens */,
 				068F02C22957A213002AF795 /* navigationExampleApp.swift */,
 				068F02C42957A213002AF795 /* ContentView.swift */,
@@ -110,6 +113,14 @@
 				068F02E02958625B002AF795 /* Home.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		068F02E529599636002AF795 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				068F02E629599649002AF795 /* KeychainService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +204,7 @@
 				068F02E12958625B002AF795 /* Home.swift in Sources */,
 				068F02DB29586133002AF795 /* SignIn.swift in Sources */,
 				068F02DE29586156002AF795 /* SignUp.swift in Sources */,
+				068F02E729599649002AF795 /* KeychainService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

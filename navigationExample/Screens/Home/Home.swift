@@ -22,9 +22,23 @@ struct Home: View {
         Fruit(name: "f"),
     ]
     @State var selectedNavigation: Fruit? = nil
-    
+
     init() {
         _selectedNavigation = State(initialValue: fruits[0])
+    }
+    
+    func saveAccessToken() {
+        let accessToken = "deneme-token"
+        let data = Data(accessToken.utf8)
+        KeychainService.standard.save(data, service: "access-token", account: "lift-os-new")
+    }
+
+    func getAccessToken() {
+        let data = KeychainService.standard.read(service: "access-token", account: "lift-osewf")
+        if let data = data {
+            let token = String(data: data, encoding: .utf8)
+            print("token", token!)
+        }
     }
 
     var body: some View {
@@ -57,9 +71,20 @@ struct Home: View {
                     Text("hadi cikiyos yeter oynadin")
                 }.buttonStyle(PlainButtonStyle())
             }.background(Color(red: 0, green: 0, blue: 0).opacity(0.85))
+
+
             // content
-            
-            Text("\(selectedNavigation?.name ?? "")")
+            VStack {
+                Text("\(selectedNavigation?.name ?? "")")
+                
+                Button(action: saveAccessToken) {
+                    Text("Save access token")
+                }
+                
+                Button(action: getAccessToken) {
+                    Text("Read acess token")
+                }
+            }
         }.navigationBarBackButtonHidden(true)
             .background(Color.red)
     }
