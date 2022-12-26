@@ -12,7 +12,7 @@ struct SplashView: View {
     @State var token: String?
 
     func getAccessToken() {
-        let data = KeychainService.standard.read(service: "access-token", account: "lift-owfs")
+        let data = KeychainService.standard.read(service: "access-token", account: "lift-os")
         if let data = data {
             let token = String(data: data, encoding: .utf8)
             self.token = token
