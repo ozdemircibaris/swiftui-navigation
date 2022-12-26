@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SignIn: View {
+    var name: String = "Animations/loading"
+
     var body: some View {
         VStack {
             Text("sign in abisi")

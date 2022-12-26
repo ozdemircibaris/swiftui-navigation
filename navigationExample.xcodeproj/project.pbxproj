@@ -16,6 +16,10 @@
 		068F02DE29586156002AF795 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068F02DD29586156002AF795 /* SignUp.swift */; };
 		068F02E12958625B002AF795 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068F02E02958625B002AF795 /* Home.swift */; };
 		068F02E729599649002AF795 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068F02E629599649002AF795 /* KeychainService.swift */; };
+		068F02EA2959D168002AF795 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 068F02E92959D168002AF795 /* Lottie */; };
+		068F02ED2959D569002AF795 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 068F02EC2959D569002AF795 /* loading.json */; };
+		068F02EF2959D58E002AF795 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068F02EE2959D58E002AF795 /* LottieView.swift */; };
+		068F02F22959F420002AF795 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068F02F12959F420002AF795 /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,9 @@
 		068F02DD29586156002AF795 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		068F02E02958625B002AF795 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		068F02E629599649002AF795 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		068F02EC2959D569002AF795 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		068F02EE2959D58E002AF795 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		068F02F12959F420002AF795 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +44,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				068F02D729585E36002AF795 /* SwiftUIRouter in Frameworks */,
+				068F02EA2959D168002AF795 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +70,7 @@
 		068F02C12957A213002AF795 /* navigationExample */ = {
 			isa = PBXGroup;
 			children = (
+				068F02EB2959D55B002AF795 /* Lottie */,
 				068F02E529599636002AF795 /* Services */,
 				068F02D82958611C002AF795 /* Screens */,
 				068F02C22957A213002AF795 /* navigationExampleApp.swift */,
@@ -84,6 +93,7 @@
 		068F02D82958611C002AF795 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				068F02F02959F40B002AF795 /* SplashView */,
 				068F02DF29586251002AF795 /* Home */,
 				068F02DC2958614A002AF795 /* SignUp */,
 				068F02D929586123002AF795 /* SignIn */,
@@ -119,8 +129,25 @@
 			isa = PBXGroup;
 			children = (
 				068F02E629599649002AF795 /* KeychainService.swift */,
+				068F02EE2959D58E002AF795 /* LottieView.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		068F02EB2959D55B002AF795 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				068F02EC2959D569002AF795 /* loading.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		068F02F02959F40B002AF795 /* SplashView */ = {
+			isa = PBXGroup;
+			children = (
+				068F02F12959F420002AF795 /* SplashView.swift */,
+			);
+			path = SplashView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +168,7 @@
 			name = navigationExample;
 			packageProductDependencies = (
 				068F02D629585E36002AF795 /* SwiftUIRouter */,
+				068F02E92959D168002AF795 /* Lottie */,
 			);
 			productName = navigationExample;
 			productReference = 068F02BF2957A213002AF795 /* navigationExample.app */;
@@ -172,6 +200,7 @@
 			mainGroup = 068F02B62957A213002AF795;
 			packageReferences = (
 				068F02D529585E36002AF795 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */,
+				068F02E82959D167002AF795 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 068F02C02957A213002AF795 /* Products */;
 			projectDirPath = "";
@@ -189,6 +218,7 @@
 			files = (
 				068F02CA2957A216002AF795 /* Preview Assets.xcassets in Resources */,
 				068F02C72957A216002AF795 /* Assets.xcassets in Resources */,
+				068F02ED2959D569002AF795 /* loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,9 +230,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				068F02C52957A213002AF795 /* ContentView.swift in Sources */,
+				068F02F22959F420002AF795 /* SplashView.swift in Sources */,
 				068F02C32957A213002AF795 /* navigationExampleApp.swift in Sources */,
 				068F02E12958625B002AF795 /* Home.swift in Sources */,
 				068F02DB29586133002AF795 /* SignIn.swift in Sources */,
+				068F02EF2959D58E002AF795 /* LottieView.swift in Sources */,
 				068F02DE29586156002AF795 /* SignUp.swift in Sources */,
 				068F02E729599649002AF795 /* KeychainService.swift in Sources */,
 			);
@@ -410,6 +442,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		068F02E82959D167002AF795 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -417,6 +457,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 068F02D529585E36002AF795 /* XCRemoteSwiftPackageReference "SwiftUIRouter" */;
 			productName = SwiftUIRouter;
+		};
+		068F02E92959D168002AF795 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 068F02E82959D167002AF795 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
