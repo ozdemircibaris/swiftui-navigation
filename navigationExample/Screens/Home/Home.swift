@@ -29,6 +29,7 @@ struct Home: View {
 
     var body: some View {
         NavigationView {
+            VStack {
                 List(fruits) { item in
                     Button(action: { withAnimation {
                         selectedNavigation = item
@@ -49,10 +50,13 @@ struct Home: View {
                         .frame(maxWidth: .infinity)
                         .cornerRadius(8)
                 }.listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                .padding(0)
-                .background(Color(red: 0, green: 0, blue: 0).opacity(0.85))
-                .listStyle(SidebarListStyle())
-            
+                    .padding(0)
+                    .listStyle(SidebarListStyle())
+                Spacer()
+                NavigationLink(destination: SignIn()) {
+                    Text("hadi cikiyos yeter oynadin")
+                }.buttonStyle(PlainButtonStyle())
+            }.background(Color(red: 0, green: 0, blue: 0).opacity(0.85))
             // content
             
             Text("\(selectedNavigation?.name ?? "")")

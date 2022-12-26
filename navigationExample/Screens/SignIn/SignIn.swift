@@ -9,14 +9,16 @@ import SwiftUI
 
 struct SignIn: View {
     var body: some View {
-        Text("sign in abisi")
-
-        NavigationLink(destination: SignUp()) {
-            Text("haydi sign up ol bakim")
-        }
-        
-        NavigationLink(destination: Home()) {
-            Text("TAMAM GIRIS YAP BAKIM")
+        VStack {
+            Text("sign in abisi")
+            
+            NavigationLink(destination: SignUp()) {
+                Text("haydi sign up ol bakim")
+            }
+            
+            NavigationLink(destination: Home()) {
+                Text("TAMAM GIRIS YAP BAKIM")
+            }
         }
         
     }
